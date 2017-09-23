@@ -8,7 +8,6 @@ public class script_1{
 
 	 public static void main(String[] args) throws interruptedexception {
 
-
 		// Start browser
 		WebDriver driver = new FirefoxDriver();
 
@@ -45,6 +44,7 @@ public class script_1{
 		// find the  element by xpath.
 		WebElement confirmPassword = driver.findElement(By.xpath("//*[@id=\"signupform\"]/div[7]/div/input"));
 
+		// enter data to sign up
 		email.sendKeys("gskaushal92@gmail.com");
 		firsttname.sendKeys("Gopal");
 		lastname.sendKeys("Sharma");
@@ -56,18 +56,21 @@ public class script_1{
 
 		Thread.sleep(5000);
 
+		//sign up click
 		driver.findElement(By.id("btn-signup")).click();
 
 		// Sleep for 5 seconds
 
 		Thread.sleep(5000);
 
+		//sign in click
 		driver.findElement(By.id("btn-signin-msg")).click();
 
 		// Sleep for 5 seconds
 
 		Thread.sleep(5000);
 
+		//enter data to login
 		driver.findElement(By.id("login-username")).sendKeys("gskaushal92@gmail.com");
 
 		driver.findElement(By.id("login-password")).sendKeys("abc@1234");
@@ -79,10 +82,9 @@ public class script_1{
 		driver.findElement(By.id("login-remember")).click();
 
 		// Sleep for 5 seconds
-
 		Thread.sleep(5000);
 
-		
+		//login click
 		driver.findElement(By.id("btn-login")).click();
 
 	}
